@@ -10,9 +10,26 @@
 
 import stanford.karel.*;
 
-public class CollectNewspaperKarel extends Karel {
+public class CollectNewspaperKarel extends SuperKarel {
     public void run() {
-        move();
-        move();
+       findTheDoor();
+       goThroughTheDoor();
     }
+
+    private void findTheDoor() {
+        while(leftIsBlocked()) {
+            if (frontIsClear()) {
+                move();
+            } else {
+                turnRight();
+            }
+        }
+        turnLeft();
+    }
+
+    private void goThroughTheDoor() {
+        move();
+        pickBeeper();
+    }
+
 }
