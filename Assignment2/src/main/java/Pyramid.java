@@ -32,7 +32,7 @@ public class Pyramid extends GraphicsProgram {
         int middle  = width/2;
 
         for(int row=BRICKS_IN_BASE; row>0; row--) {
-            int startPositionX = middle - (row/2 * BRICK_WIDTH) - ();
+            int startPositionX = middle - (row/2 * BRICK_WIDTH) - ((row%2)*(BRICK_WIDTH/2));
             int startPositionY = height - ((BRICKS_IN_BASE-row+1)*BRICK_HEIGHT);
             for(int brickCounter = 0; brickCounter<row; brickCounter++) {
                 int x = startPositionX+(BRICK_WIDTH*brickCounter);
