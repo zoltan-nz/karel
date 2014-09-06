@@ -8,6 +8,7 @@ public class SimpleRandom extends ConsoleProgram {
     public void run() {
 
         while(true) {
+            myRGen.setSeed(1);
             int kockakSzama = readInt("Hany darab kockad van? ");
             int maxEzJohetKi = kockakSzama * KOCKA_OLDAL_SZAMA;
             int dobasSzamlalo = 0;
